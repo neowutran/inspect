@@ -10,7 +10,7 @@ module.exports = function Inspect(dispatch){
         9710: "BP",
     }
 
-    dispatch.hook('sUserPaperdollInfo', (event) => {
+    dispatch.hook('S_USER_PAPERDOLL_INFO', 1, (event) => {
         lastPID = event.pID.low;
         lastName = event.name;
         entries = {};
@@ -19,7 +19,7 @@ module.exports = function Inspect(dispatch){
         })
     })
 
-    dispatch.hook('sDungeonClearCountList', (event) => {
+    dispatch.hook('S_DUNGEON_CLEAR_COUNT_LIST', 1, (event) => {
         if(event.pid !== lastPID) return;
         lastPID = false;
         slash.print(`[inspect] ${lastName}:`);
