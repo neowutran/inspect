@@ -6,9 +6,10 @@ module.exports = function Inspect(dispatch){
     let lastName;
     let entries = {};
     let instances = {
-        9950: "HH",
-        9970: "RMHM",
-        9710: "BP",
+        9781: "VS NM",
+        9981: "VS HM",
+        9780: "VH NM",
+        9980: "VH HM"
     }
 
     dispatch.hook('S_USER_PAPERDOLL_INFO', 1, (event) => {
